@@ -1,0 +1,14 @@
+author: HexedHero
+name: DarknessDamage
+main: me.hexedhero.dd.DarknessDamage
+version: '${project.version}'
+api-version: '1.20'
+prefix: DarknessDamage
+load: STARTUP
+permissions:
+  darknessdamage.bypass:
+    default: op
+    description: Command to prevent and bypass damage caused by darkness
+  darknessdamage.command.reload:
+    default: op
+    description: Command to reload plugin configurations

@@ -1,0 +1,72 @@
+# Thank you for Downloading DarknessDamage!
+#
+# Feel free to check out my other plugins here:
+# https://www.spigotmc.org/members/429752/#resources
+
+# Put all the worlds you want this enabled in, add * for all worlds.
+Enabled Worlds:
+  - "world"
+# - "*"
+
+# How often in tick should we check if we should damage players.
+# 20 ticks = 1 second.
+Damage Task Timer: 60
+
+# The light level range of what damages you.
+Light Range: 0-6
+
+# Damage to deal to the player each task run.
+Damage: 1
+
+# Damage to deal whether player is between these Y levels.
+Damage Y Level: -58|58
+
+# Should we increase the damage the longer the player is in the dark?
+# Example: The damage will start at 2 then increase to 4 then 6 etc.
+# until the player steps back into the light which it rests back to 2 for next time.
+Damage Increases: true
+
+# Should the damage kill the player or just leave them at 1 hp?
+Damage Kills: true
+
+# Execute commands on some events
+Commands:
+
+  # Commands to fire when the player enters the darkness. Empty to disable.
+  Enter:
+    - ""
+    # - "say %player% entered darkness"
+    # - "kill %player%"
+
+  # Commands to fire when the player leaves the darkness. Empty to disable.
+  Leave:
+    - ""
+    # - "say %player% entered the light"
+
+# Should the plugin not damage players with light sources in their main/off hand?
+# Configure the valid light sources below.
+Ignore Light Sources In Hand:
+
+  # Enabled or not.
+  Enabled: true
+
+  # Materials to ignore
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+  Valid Light Sources:
+    - "TORCH"
+    - "REDSTONE_TORCH"
+    - "GLOWSTONE"
+    - "SEA_LANTERN"
+    - "LANTERN"
+    - "SOUL_LANTERN"
+
+# How often in tick should we check and tell players if they are in the darkness.
+# 20 ticks = 1 second.
+Message Task Timer: 5
+
+# The light level stamp to consider the place in the deep darkness.
+Light Level To Deep Darkness: 0-6
+
+# The message to send to the player when they are in the range to be damaged
+# Set to "" to disable.
+Action Bar Message Darkness: "&4☠ &c&lYOU'RE IN THE DARKNESS &4☠"
